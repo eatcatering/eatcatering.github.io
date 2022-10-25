@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-titulo: #f23f3c;
+  --color-letrasoscuras: #f45654;
+  --color-oscuro: rgb(39, 38, 38);;
+  --color-oscuro1: #333333;
+  --backgraund-color:linear-gradient(132deg, rgba(0,0,0,0.9136029411764706) 18%, rgba(0,0,0,0) 100%);
+  --fuente-titulos: 'Dancing Script', cursive;
+  --fuente-parrafos:'Montserrat', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+section [id]{
+  scroll-margin-top: 0;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5;
+  /* background-color: rgb(39, 38, 38); */
+}
+
+.contenedor{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+/*header*/
+
+.header {
+  height:100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display:grid;
+  grid-template-rows: max-content 1fr;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  padding: 20px  0;
+}
+
+
+.logo img {
+  width: 120px;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.menu li {
+  padding-left:20px;
+}
+
+.menu a {
+   text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  background-color: #f45654;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  transition: all ease-in-out 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media (min-width:768px) and (max-width:1023px){
+  .header {
+    height:90vh;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+  .menu a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Menu */
+  .menu {
+    padding: 10px ;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 70%;
+    align-items: flex-start;
+    gap: 1.1rem;
+    background: rgb(51, 51, 51);
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 111;
+  }
+
+  .menu li {
+    padding: 0;
+  }
+
+  .menu a {
+    padding: 20px;
+    color:  var(#fff);
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .cerrar-menu {
+    align-self: flex-end;
+    padding: 36px 25px;
+  }
+
+  .menu_abierto {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .abrir-menu:focus:not(:focus-visible),
+  .cerrar-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .menu a::after {
+    content: none;
+  }
+
+  .menu a:hover {
+    color: #f45654;
+  }
+}
+
+/*-------------Seccion de Hero---------------------*/
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  height: 100%;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.inicio {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.1rem;
+ }
+
+.titulo1 {
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+  font-family: var(--fuente-texto);
+  font-size: 22px;
+  color: #fff;
+}
+
+.titulo1 p{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  font-family: var(--fuente-texto);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+
+.inicio a {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.boton-bajar{
+position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 20px;
+  text-align: center;
+}
+.boton-bajar a{
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  color: white;
+  font-size: 12px;
+  transition: all 0.5s ease-in-out;
+}
+.boton-bajar a:hover{
+  color: var(--color-letrasoscuras);
+  font-weight: 700;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+  video {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+
+
+.inicio {
+  gap: 0.7rem;
+ }
+
+.titulo1 {
+  font-size: 22px;
+}
+
+.titulo1 p{
+  font-size: 20px;
+}
+
+.inicio button {
+  width: 200px;
+  padding: 8px 5px;
+}
+
+.inicio a {
+  font-size: 13px;
+}
+
+.boton-bajar a{
+  font-size: 11px;
+}
+
+}
+
+@media (max-width: 767px){
+
+  .inicio {
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 10px;
+   }
+  .titulo1 {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .titulo1 p{
+    font-size: 15px;
+  }
+
+  .inicio button {
+    width: 150px;
+    padding: 8px 0;
+  }
+  
+  .inicio a {
+    font-size: 12px;
+  }
+  
+  .boton-bajar a{
+    font-size: 10px;
+  }
+}
+
+
+/*------------------FOOTER-----------------*/
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(39, 38, 38);
+  
+}
+
+.footer {
+  width: 90%;
+  padding: 30px 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+
+.logo-footer img{
+ width: 120px;
+}
+
+.contacto_list {
+ color: #fff;
+ text-transform: uppercase;
+ font-weight: lighter;
+ font-size: 12px;
+ letter-spacing: 2px;
+ text-align: center;
+}
+
+
+.social_media {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social_media a {
+  border-radius: 10px;
+  background-color: transparent;
+  padding:  5px 15px;
+  transition: all 0.3s ease-in;
+}
+
+.social_media a:first-child:hover {
+ background-color: rgb(3, 53, 139);
+}
+
+.social_media a:nth-child(2):hover {
+  background-color: rgb(212, 48, 137);
+}
+
+.social_media a:last-child:hover {
+  background-color: rgb(240, 0, 0);
+}
+
+.social_media i {
+  color: white;
+  font-size: 15px;
+  
+}
+
+.text-footer {
+  background-color: rgb(33, 32, 32);
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+
+
+/*---boton ir arriba-----*/
+
+.btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background:#333333;
+  color: #fff;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(100px);
+  transition: 0.5s;
+}
+
+.btnTop-on {
+  transform: translateY(0);
+}

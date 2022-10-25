@@ -1,0 +1,223 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --color-titulo: #f23f3c;
+  --color-letrasoscuras: #f45654;
+  --color-oscuro: #333333;
+  --fuente-titulos: 'Dancing Script', cursive;
+  --fuente-texto: 'Josefin Sans', sans-serif;
+  --fuente-tit2:'Amatic SC', cursive;
+}
+
+
+
+.seccion-contacto{
+  background-image: linear-gradient(95deg, rgba(0,0,0,0.8547794117647058) 37%, rgba(0,0,0,0.7035189075630253) 100%),  url("/img/imagenes-cocina-4.jpg");
+  width: 100%;
+  object-fit: cover;
+  height: max-content;
+  background-attachment: fixed;
+  padding: 30px 10px;
+  margin: 0 auto;
+}
+
+
+.seccion-contacto h5{
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+
+.contacto-sec{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+  align-items: center;
+}
+
+.box-contacto{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+}
+.contact-list{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.contact-list p{
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  font-size: 16px;
+
+}
+
+.box-contacto i{
+ color:#f45654
+}
+
+.box-contacto h6{
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+  display: inline;
+  font-family: var(--fuente-texto);
+}
+
+iframe{
+  padding: 10px;
+}
+
+form{
+  width: 400px;
+padding: 0 20px;
+font-family: var(--fuente-texto);
+font-weight: 400;
+}
+
+input, textarea, select{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 7px ;
+  border: none;
+  background: #f2f2f2;
+}
+
+
+textarea{
+  overflow-y: auto;
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+#BSumit{
+  background: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  grid-row: 1/2;
+  grid-column: 2/3;
+font-family: var(--fuente-texto);
+text-transform: uppercase;
+padding: 10px 0;
+letter-spacing: 1px;
+transition: all 0.3s ease-in;
+}
+
+
+#BSumit:hover{
+transform: scale(1.1);
+background: #f45654;
+border: none;
+}
+
+
+@media (min-width:768px)and (max-width:1023px){
+
+.seccion-contacto h5{
+  font-size: 16px;
+}
+
+
+.contacto-sec{
+  gap: 1.5rem;
+}
+
+.box-contacto h6{
+  font-size: 14px;
+}
+
+
+form{
+  width: 300px;
+}
+
+label{
+  font-size: 14px;
+}
+
+
+#button{
+ font-size: 14px;
+}
+
+
+
+
+}
+
+@media (max-width:767px){
+
+  .seccion-contacto h5{
+    font-size: 16px;
+  }
+  
+  .contacto-sec{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+
+  .box-contacto h6{
+    font-size: 14px;
+  }
+  
+  form{
+   max-width: 300px;
+   min-width: 150px;
+
+  }
+
+  .contact-list p{
+    font-size: 15px;
+  }
+
+}
+
+
+@media (max-width:411px){
+
+  .seccion-contacto h5{
+    font-size: 14px;
+  }
+ iframe{
+  max-width: 300px;
+ width: 100%;
+    height: 300px;
+  } 
+
+label{
+  font-size: 13px;
+}
+
+  form{
+    max-width: 200px;
+    min-width: 100px;
+ 
+   }
+
+
+   .contact-list p{
+    font-size: 13px;
+  }
+}

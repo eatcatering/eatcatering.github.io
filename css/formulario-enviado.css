@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-titulo: #f23f3c;
+  --color-letrasoscuras: #f45654;
+  --color-oscuro: rgb(39, 38, 38);;
+  --color-oscuro1: #333333;
+  --backgraund-color:linear-gradient(132deg, rgba(0,0,0,0.9136029411764706) 18%, rgba(0,0,0,0) 100%);
+  --fuente-titulos: 'Dancing Script', cursive;
+  --fuente-parrafos:'Montserrat', sans-serif;
+}
+
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/img/Fondo-evento-social.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ line-height: 1.5;
+}
+
+div{
+ width: 70%;
+ height: 50%;
+ border-radius: 8px;
+  background-color:#333333;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+
+}
+
+h4, h5, a{
+ text-align: center;
+  text-transform: uppercase;
+  color:#fff;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5px 0;
+}
+
+i{
+  color: #f45654;
+}
+
+a{
+  color: #f45654;
+  text-decoration: underline;
+  text-transform: none;
+}
+
+img{
+  width: 90px;
+  padding: 10px;
+}
